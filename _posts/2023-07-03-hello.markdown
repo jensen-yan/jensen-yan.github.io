@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "想法"
+date:   2023-07-03 15:10:02 +0800
+categories: jekyll update
+---
+
+
+
+# 想法
+
+目前正在为了找工作刷leetcode，在大二就尝试在leetcode上刷题，但是一直没有找到合适的方法，题目太散乱，没有章法和套路。最近在做[labuladong的算法小抄](https://labuladong.gitee.io/algo/) 终于找到了很好的讲算法的博客，能把理论+实践都结合起来，这样也能更好的做题，这也是好博客的意义。
+
+希望我自己也能逐渐完善自己的博客，帮助到更多的人，加油！
