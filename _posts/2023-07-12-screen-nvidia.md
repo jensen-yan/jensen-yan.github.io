@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "ubuntu 双屏幕闪烁问题解决"
 date:   2023-07-12 
 ---

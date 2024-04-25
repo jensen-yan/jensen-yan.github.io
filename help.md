@@ -1,10 +1,3 @@
----
-layout: page
-title: 博客帮助
-permalink: /help/
----
-
-
 ## 网站说明
 
 _config.yml 配置主题和插件
@@ -40,7 +33,7 @@ Jekyll 主要分为页面（page）和文章(post)两种内容，
 在根目录下新建md文件，例如help.md，内容如下：
 ```markdown
 ---
-layout: page
+layout: default
 title: 博客帮助
 permalink: /help/
 ---
@@ -52,7 +45,7 @@ permalink: /help/
 在_posts目录下新建md文件，例如2023-07-13-algorithm.md，内容如下：
 ```markdown
 ---
-layout: post
+layout: default
 title:  "算法套路总结"
 date:   2023-07-13
 ---
@@ -65,3 +58,8 @@ date:   2023-07-13
 ```
 cheatsheet.sh cheatsheet.md
 ```
+
+### jekyll 学习
+
+默认生成的网页放在_site目录下，使用jekyll build命令生成网页，jekyll serve命令启动本地服务。
+前面加上bundle exec 保证命令在特定的gem环境中执行！

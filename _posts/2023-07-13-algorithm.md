@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "算法套路总结"
 date:   2023-07-13 
 ---
