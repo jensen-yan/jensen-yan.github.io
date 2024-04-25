@@ -1,0 +1,407 @@
+---
+layout: page
+title: cheatsheet
+permalink: /cheatsheet/
+---
+
+<!DOCTYPE html>
+<!-- 
+    Get this template from `pandoc -D html`
+    pandoc version: 2.5
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Markdown Cheatsheet</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!-- 2021.8.25 by xieby1 created -->
+
+  <style>
+  *,
+  div.sourceCode {
+      margin: 0;
+  }
+
+  ul {
+      padding-inline-start: 1em;
+  }
+
+  p > code, /* inline code */
+  section > pre, /* unstyled code block */
+  div.sourceCode /* styled code block */ {
+      border: 1px solid #e7eaed;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  div.sourceCode::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  div.sourceCode {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  code.sourceCode {
+      white-space: pre-wrap;
+  }
+
+  #TOC > ul > li,
+  section.level2 {
+      margin: .5em 0 .5em 0;
+      border: 1px solid #adb3b9;
+      border-radius: 16px;
+      box-shadow: #0c0d0e33 0 3px 0, #fff 0 0 0 6px inset;
+      padding: .2em;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+  }
+  section.level3 {
+      max-width: fit-content;
+      max-height: fit-content;
+      overflow: auto;
+      margin: .2em;
+      border: 1px solid #adb3b9;
+      border-radius: 8px;
+      box-shadow: #0c0d0e33 0 1px 0, #fff 0 0 0 2px inset;
+      padding: .2em;
+      flex-grow: 1;
+  }
+  h2 {
+      width: 100%;
+  }
+
+  h2,
+  h3 {
+    margin: 0 0 0 0;
+  }
+
+  table,
+  th,
+  tr,
+  td {
+      border: 1px solid #999;
+      border-collapse: collapse;
+  }
+
+  #TOC > ul > li > ul {
+      /* multiple column in first level TOC */
+      column-width: 6em;
+      width: 100%;
+      column-rule: 1px solid #adb3b9;
+      /* no padding in first level TOC */
+      padding: 0 0 0 0;
+      word-wrap: break-word;
+  }
+
+  #TOC > ul > li > ul {
+      /* no padding in second level TOC */
+      padding: 0 0 0 0;
+  }
+
+  #TOC > ul > li,
+  #TOC > ul > li > ul > li {
+      /* no bullet */
+      list-style-type: none;
+  }
+
+  /* first level toc content */
+  #TOC > ul > li > a {
+      font-weight: bold;
+      zoom: 120%;
+  }
+  /* second level toc content */
+  #TOC > ul > li > ul > li > a {
+      background: #0c0d0e33;
+  }
+  </style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#通用" id="toc-通用">通用</a>
+<ul>
+<li><a href="#git" id="toc-git">Git</a></li>
+<li><a href="#proxy" id="toc-proxy">proxy</a>
+<ul>
+<li><a href="#apt" id="toc-apt">apt</a></li>
+<li><a href="#nix" id="toc-nix">nix</a></li>
+<li><a href="#bash" id="toc-bash">bash</a></li>
+</ul></li>
+<li><a href="#apt-1" id="toc-apt-1">apt</a></li>
+<li><a href="#gcc" id="toc-gcc">gcc</a></li>
+<li><a href="#blog" id="toc-blog">BLOG</a></li>
+</ul></li>
+<li><a href="#命令行" id="toc-命令行">命令行</a>
+<ul>
+<li><a href="#tools" id="toc-tools">tools</a></li>
+</ul></li>
+<li><a href="#语言" id="toc-语言">语言</a>
+<ul>
+<li><a href="#ccpp" id="toc-ccpp">C/CPP</a></li>
+<li><a href="#python" id="toc-python">Python</a></li>
+<li><a href="#java" id="toc-java">Java</a></li>
+<li><a href="#matplotlib" id="toc-matplotlib">matplotlib</a></li>
+<li><a href="#bash-1" id="toc-bash-1">Bash</a>
+<ul>
+<li><a href="#变量" id="toc-变量">变量</a></li>
+<li><a href="#args" id="toc-args">args</a></li>
+<li><a href="#条件" id="toc-条件">条件</a></li>
+</ul></li>
+<li><a href="#makefile" id="toc-makefile">Makefile</a>
+<ul>
+<li><a href="#参数" id="toc-参数">参数</a></li>
+<li><a href="#wildcard" id="toc-wildcard">wildcard</a></li>
+</ul></li>
+<li><a href="#awk" id="toc-awk">awk</a></li>
+</ul></li>
+<li><a href="#指令集" id="toc-指令集">指令集</a>
+<ul>
+<li><a href="#arm" id="toc-arm">ARM</a></li>
+<li><a href="#x86" id="toc-x86">x86</a></li>
+<li><a href="#risc-v" id="toc-risc-v">RISC-V</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="通用" class="level1">
+<h1>通用</h1>
+<section id="git" class="level2">
+<h2>Git</h2>
+</section>
+<section id="proxy" class="level2">
+<h2>proxy</h2>
+<section id="apt" class="level3">
+<h3>apt</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/apt/apt.conf</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Acquire::http::Proxy</span> <span class="st">&quot;http://127.0.0.1:7890&quot;</span><span class="kw">;</span></span></code></pre></div>
+</section>
+<section id="nix" class="level3">
+<h3>nix</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/systemd/system/nix-daemon.service.d/override.conf</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[Service]</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">Environment</span><span class="op">=</span>http_proxy=http://127.0.0.1:7890</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="va">Environment</span><span class="op">=</span>https_proxy=http://127.0.0.1:7890  </span></code></pre></div>
+</section>
+<section id="bash" class="level3">
+<h3>bash</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/.bashrc or ~/.zshrc</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># where proxy, all use http://</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">proxyon ()</span> <span class="kw">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">export</span> <span class="va">http_proxy</span><span class="op">=</span><span class="st">&quot;http://127.0.0.1:7890&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">export</span> <span class="va">https_proxy</span><span class="op">=</span><span class="st">&quot;http://127.0.0.1:7890&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">export</span> <span class="va">HTTP_PROXY</span><span class="op">=</span><span class="st">&quot;http://127.0.0.1:7890&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">export</span> <span class="va">HTTPS_PROXY</span><span class="op">=</span><span class="st">&quot;http://127.0.0.1:7890&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;HTTP Proxy on&quot;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># where noproxy</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">proxyoff ()</span> <span class="kw">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="bu">unset</span> <span class="va">http_proxy</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">unset</span> <span class="va">https_proxy</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">unset</span> <span class="va">HTTP_PROXY</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">unset</span> <span class="va">HTTPS_PROXY</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;HTTP Proxy off&quot;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ex">proxyon</span></span></code></pre></div>
+</section>
+</section>
+<section id="apt-1" class="level2">
+<h2>apt</h2>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/apt/sources.list</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">deb</span> https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">deb</span> https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">deb</span> https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">deb</span> https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted universe multiverse</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/apt/sources.list.d/*.list</span></span></code></pre></div>
+</section>
+<section id="gcc" class="level2">
+<h2>gcc</h2>
+</section>
+<section id="blog" class="level2">
+<h2>BLOG</h2>
+<p>使用github pages + Jekyll</p>
+</section>
+</section>
+<section id="命令行" class="level1">
+<h1>命令行</h1>
+<section id="tools" class="level2">
+<h2>tools</h2>
+<p>tldr xxx</p>
+</section>
+</section>
+<section id="语言" class="level1">
+<h1>语言</h1>
+<section id="ccpp" class="level2">
+<h2>C/CPP</h2>
+</section>
+<section id="python" class="level2">
+<h2>Python</h2>
+</section>
+<section id="java" class="level2">
+<h2>Java</h2>
+</section>
+<section id="matplotlib" class="level2">
+<h2>matplotlib</h2>
+</section>
+<section id="bash-1" class="level2">
+<h2>Bash</h2>
+<section id="变量" class="level3">
+<h3>变量</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">name</span><span class="op">=</span><span class="st">&quot;himiao&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$name</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="va">greeting</span><span class="op">=</span><span class="st">&quot;hello, &quot;</span><span class="va">$name</span><span class="st">&quot; !&quot;</span> <span class="co"># 拼接</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="va">greeting_1</span><span class="op">=</span><span class="st">&quot;hello, </span><span class="va">${name}</span><span class="st"> !&quot;</span>   <span class="co"># 拼接</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> file <span class="kw">in</span> <span class="va">$(</span><span class="fu">ls</span><span class="va">)</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="va">$file</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">unset</span> <span class="va">name</span>  <span class="co"># 删除变量</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="va">my_array</span><span class="op">=</span><span class="va">(</span>1 2 3<span class="va">)</span>    <span class="co"># 数组</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">${my_array</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="va">}</span> <span class="co"># 数组元素</span></span></code></pre></div>
+</section>
+<section id="args" class="level3">
+<h3>args</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">$0</span><span class="ex">:</span> 脚本名</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="va">$1</span><span class="ex">:</span> 第一个参数</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="va">$#</span><span class="ex">:</span> 参数个数</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="va">$@</span><span class="ex">:</span> 所有参数</span></code></pre></div>
+</section>
+<section id="条件" class="level3">
+<h3>条件</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if-elif-else-fi</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> file <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;file exists&quot;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="bu">[</span> <span class="ot">-d</span> dir <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;dir exists&quot;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;not exists&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+</section>
+</section>
+<section id="makefile" class="level2">
+<h2>Makefile</h2>
+<section id="参数" class="level3">
+<h3>参数</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">$@:</span><span class="dt"> 目标</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dv">$^:</span><span class="dt"> 所有依赖</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dv">$&lt;:</span><span class="dt"> 第一个依赖</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dv">test-aarch64:</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="dv">test-%:</span><span class="dt"> himiao/% himiao/%.aot</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="er">    </span><span class="ch">${</span><span class="dt">GEM5</span><span class="ch">}</span> -c <span class="ch">$(</span><span class="kw">abspath</span><span class="st"> </span><span class="ch">$&lt;)</span> --aot <span class="ch">$(</span><span class="kw">abspath</span><span class="st"> </span><span class="ch">$(</span><span class="kw">word</span><span class="st"> 2</span><span class="kw">,</span><span class="ch">$^))</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># word 2,$^: 第二个依赖</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 隐式匹配</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="dv">%:</span><span class="dt">%.c</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="er">    </span><span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span> <span class="ch">$&lt;</span> -o <span class="ch">$@</span></span></code></pre></div>
+</section>
+<section id="wildcard" class="level3">
+<h3>wildcard</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">EXECUTABLES</span><span class="ch">=$(</span><span class="kw">patsubst</span><span class="st"> %.cpp</span><span class="kw">,</span><span class="st"> %</span><span class="kw">,</span><span class="st"> </span><span class="ch">$(</span><span class="kw">wildcard</span><span class="st"> *.cpp</span><span class="ch">))</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">all:</span><span class="dt"> </span><span class="ch">${</span><span class="dt">EXECUTABLES</span><span class="ch">}</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># wildcard: 所有cc文件</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># patsubst: 替换cc为d</span></span></code></pre></div>
+</section>
+</section>
+<section id="awk" class="level2">
+<h2>awk</h2>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">&#39;{print $1}&#39;</span> file   <span class="co"># 打印第一列</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">&#39;/ipc/ {print FILENAME,$1}&#39;</span> file  <span class="co"># 打印包含ipc的行的文件名和第一列</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">&#39;{ sum += $1 } END { print sum }&#39;</span> file  <span class="co"># awk for循环求和</span></span></code></pre></div>
+</section>
+</section>
+<section id="指令集" class="level1">
+<h1>指令集</h1>
+<section id="arm" class="level2">
+<h2>ARM</h2>
+</section>
+<section id="x86" class="level2">
+<h2>x86</h2>
+</section>
+<section id="risc-v" class="level2">
+<h2>RISC-V</h2>
+</section>
+</section>
+</body>
+</html>
