@@ -54,6 +54,19 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-security main restricted 
 ## BLOG
 使用github pages + Jekyll
 
+## tldr
+
+安装并配置cache
+参考[网址](https://github.com/tldr-pages/tldr/blob/main/CLIENT-SPECIFICATION.md#caching)
+[缓存位置](https://github.com/tldr-pages/tldr-python-client/blob/main/README.md#cache-location)
+```bash
+sudo snap install tldr
+export TLDR_CACHE_ENABLED=1  to ~/.zshrc
+mkdir ~/.cache/tldr && cd
+wget  https://github.com/tldr-pages/tldr/releases/latest/download/tldr.zip
+unzip tldr.zip -d tldr
+tldr -u
+```
 
 # 命令行
 
